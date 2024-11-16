@@ -54,7 +54,13 @@ const Home = () => {
       3
     </div>
 
-    <button className='row-start-3 col-span-3' onClick={() => {setSelectedPlayer(null); setTimeout(() => {setSelectedPlayer(pickRandom(activePlayers))}, 500)}}>Pick a player</button>
+    <button className='row-start-3 col-span-3' onClick={() => {
+      setSelectedPlayer(null)
+      for (let i = 0; i < 1000; i++)
+      setTimeout(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 500))}
+    }>
+      Pick a player
+    </button>
     <div className='row-start-4 col-span-3'>
       {selectedPlayer != null && <p>Player nr. <span className='font-bold text-red-600'>{selectedPlayer + 1}</span> picked</p>}
     </div>
