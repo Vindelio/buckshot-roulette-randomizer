@@ -24,7 +24,7 @@ const Home = () => {
   </header>
   <main className='grid grid-rows-4 grid-cols-3 justify-items-center flex-1'>
     <div 
-    className={`${activePlayers[0] ? 'bg-slate-800' : 'bg-slate-300'} text-green-300 w-16 h-16 row-start-2 col-start-1`}
+    className={`${activePlayers[0] ? 'bg-slate-800' : 'bg-slate-300'} ${selectedPlayer === 0 && 'outline'} outline-4 outline-green-500 text-green-300 w-16 h-16 row-start-2 col-start-1`}
     onClick={() => {
       const newState = [...activePlayers]
       newState[0] = !activePlayers[0]
@@ -34,7 +34,7 @@ const Home = () => {
       1
     </div>
     <div
-    className={`${activePlayers[1] ? 'bg-slate-800' : 'bg-slate-300'} text-green-300 w-16 h-16 row-start-1 col-start-2`}
+    className={`${activePlayers[1] ? 'bg-slate-800' : 'bg-slate-300'} ${selectedPlayer === 1 && 'outline'} outline-4 outline-green-500 text-green-300 w-16 h-16 row-start-1 col-start-2`}
     onClick={() => {
       const newState = [...activePlayers]
       newState[1] = !activePlayers[1]
@@ -44,7 +44,7 @@ const Home = () => {
       2
     </div>
     <div
-    className={`${activePlayers[2] ? 'bg-slate-800' : 'bg-slate-300'} text-green-300 w-16 h-16 row-start-2 col-start-3`}
+    className={`${activePlayers[2] ? 'bg-slate-800' : 'bg-slate-300'} ${selectedPlayer === 2 && 'outline'} outline-4 outline-green-500 text-green-300 w-16 h-16 row-start-2 col-start-3`}
     onClick={() => {
       const newState = [...activePlayers]
       newState[2] = !activePlayers[2]
