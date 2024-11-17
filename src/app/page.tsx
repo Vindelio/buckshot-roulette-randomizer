@@ -74,7 +74,7 @@ const Home = () => {
 
     <button className='row-start-5 col-span-3 rounded-md w-36 p-4 bg-slate-800' onClick={() => {
       setSelectedPlayer(null)
-      setActivePlayers([true, true, true])
+      setActivePlayers([true, true, true, false])
     }}>
       Reset
     </button>
