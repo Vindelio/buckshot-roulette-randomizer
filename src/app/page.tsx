@@ -22,7 +22,7 @@ const Home = () => {
   <header className='bg-slate-800 text-green-300 text-center p-4 mb-10'>
     <h1>!!Work in progess!!(clearly) Buckshot roulette player picker !!Work in progess!!</h1>
   </header>
-  <main className='grid grid-rows-4 grid-cols-3 justify-items-center flex-1'>
+  <main className='grid grid-rows-5 grid-cols-3 justify-items-center items-center flex-1'>
     <div 
     className={`${activePlayers[0] ? 'bg-slate-800' : 'bg-slate-300'} ${selectedPlayer === 0 && 'outline'} outline-4 outline-green-500 text-green-300 w-16 h-16 row-start-2 col-start-1 grid place-content-center`}
     onClick={() => {
@@ -54,14 +54,22 @@ const Home = () => {
       3
     </div>
 
-    <button className='row-start-3 col-span-3' onClick={() => {
+    <button className='row-start-3 col-span-3 rounded-md w-36 p-4 bg-slate-800' onClick={() => {
       setSelectedPlayer(null)
       for (let i = 0; i < 1000; i++)
-      setTimeout(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 500))}
+      setTimeout(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 500 + 300))}
     }>
       Pick a player
     </button>
-    <div className='row-start-4 col-span-3'>
+
+    <button className='row-start-4 col-span-3 rounded-md w-36 p-4 bg-slate-800' onClick={() => {
+      setSelectedPlayer(null)
+      setActivePlayers([true, true, true])
+    }}>
+      Reset
+    </button>
+
+    <div className='row-start-5 col-span-3'>
       {selectedPlayer != null && <p>Player nr. <span className='font-bold text-red-600'>{selectedPlayer + 1}</span> picked</p>}
     </div>
   </main>
