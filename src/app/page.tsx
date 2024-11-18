@@ -64,7 +64,7 @@ const Home = () => {
       4
     </button>
 
-    <button className='row-start-4 col-span-3 rounded-md w-36 p-4 bg-slate-800' onClick={() => {
+    <button className='row-start-4 col-span-3 rounded-md w-36 p-4 bg-slate-800 text-slate-200' onClick={() => {
       setSelectedPlayer(null)
       for (let i = 0; i < 1000; i++)
       setTimeout(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 500 + 300))}
@@ -72,7 +72,7 @@ const Home = () => {
       Pick a player
     </button>
 
-    <button className='row-start-5 col-span-3 rounded-md w-36 p-4 bg-slate-800' onClick={() => {
+    <button className='row-start-5 col-span-3 rounded-md w-36 p-4 bg-slate-800 text-slate-200' onClick={() => {
       setSelectedPlayer(null)
       setActivePlayers([true, true, true, false])
     }}>
