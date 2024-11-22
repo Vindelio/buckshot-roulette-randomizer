@@ -17,6 +17,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
   - [Reporting Bugs](#reporting-bugs)
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Your First Code Contribution](#your-first-code-contribution)
+  - [Useful links](#useful-links)
 - [Styleguides](#styleguides)
   - [Code Conventions](#code-conventions)
   - [Commit Messages](#commit-messages)
