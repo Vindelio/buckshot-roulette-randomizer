@@ -114,6 +114,8 @@ To contribute, first fork the project and clone your repository. (To read more v
 After you have cloned the repository, run the commands
 ```bash
 npm i
+```
+```bash
 npm run dev
 ```
 To install dependancies and run the project locally. Then go to ```localhost:3000```(It might change depending on if the port is open, see the console to ensure you open the correct url), and your should see the Buckshot Roulette Player Picker!
