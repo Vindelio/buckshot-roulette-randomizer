@@ -1,7 +1,7 @@
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import JammerReplica from './components/Randomizer/Jammer-replica';
+import JammerReplica from './components/Randomizer/JammerReplica';
 
 const Home = () => {  
   return (
