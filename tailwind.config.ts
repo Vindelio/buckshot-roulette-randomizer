@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        plex: ['var(--font-plex']
+        plex: ['var(--font-plex', 'monospace']
       }
     },
   },
