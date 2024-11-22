@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"
+import { IBM_Plex_Mono } from "next/font/google"
 import "./globals.css";
 
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter"
+const ibmMono = IBM_Plex_Mono({
+  weight: ["100", "400"],
+  subsets: ["latin"],
+  variable: "--font-plex"
 })
 export const metadata: Metadata = {
   title: "Buckshot Roulette Picker",
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${ibmMono.variable} antialiased bg-slate-950 text-slate-300`}
       >
         {children}
       </body>
