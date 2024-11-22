@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import PlayerButton from './JammerButton'
 import WideButton from './JammerWideButton'
+import Screen from './JammerScreen'
 import arrow from '@/images/arrow.svg'
 
 const pickRandom = (activePlayers: boolean[]) => {
@@ -36,12 +37,14 @@ const JammerReplica = () => {
       <div className='w-full'>
         <h2 className='text-lg'>graesberg electronics</h2>
       </div>
+
+      <Screen selectedPlayer={selectedPlayer} />
+
       <div className='flex justify-evenly w-full'>
         {activePlayers.map((active, index) => (
           <PlayerButton
             key={index}
             active={active}
-            chosen={selectedPlayer === index}
             onclick={() => handlePlayerSelect(activePlayers, setActivePlayers, index)}
             disabled={running}
           >
