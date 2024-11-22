@@ -75,11 +75,6 @@ const JammerReplica = () => {
           Reset
         </WideButton>
       </div>
-
-      <div className='row-start-6 col-span-3'>
-          {selectedPlayer != null && selectedPlayer != 3 && <p>Player nr. <span className='font-bold text-red-600'>{selectedPlayer + 1}</span> picked</p>}
-          {selectedPlayer === 3 && <p><span className='font-bold text-red-600'>You</span> were selected</p>}
-        </div>
     </main>
   )
 }
