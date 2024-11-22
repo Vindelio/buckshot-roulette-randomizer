@@ -19,6 +19,7 @@ const JammerButton: FC<JammerButtonProps> = ({ active, className, onclick, disab
       justify-self-end
       grid
       place-content-center
+      disabled:bg-slate-400
       ${className}`}
     onClick={onclick}
     disabled={disabled}
