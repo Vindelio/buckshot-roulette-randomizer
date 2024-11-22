@@ -55,7 +55,6 @@ const JammerReplica = () => {
 
       <div className='flex justify-between w-full'>
         <WideButton onClick={() => {
-          setSelectedPlayer(null)
           const interval = setInterval(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 100))
           setRunning(true)
           setTimeout(() => {clearInterval(interval); setRunning(false)}, Math.floor(Math.random() * 10 * 500 + 300))
