@@ -25,7 +25,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Buckshot Roulette Randomizer Code of Conduct](https://git.graesberg.com/buckshot-roulette-randomizer/blob//CODE_OF_CONDUCT.md).
+[Buckshot Roulette Randomizer Code of Conduct](https://git.graesberg.com/buckshot-roulette-randomizer/blob/main/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <buckshot@graesberg.com>.
 
