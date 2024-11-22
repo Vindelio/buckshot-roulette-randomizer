@@ -1,9 +1,10 @@
 "use client"
 
 import { useState } from 'react'
+import Image from 'next/image'
 import PlayerButton from './JammerButton'
 import WideButton from './JammerWideButton'
-import { Icon } from '@iconify/react'
+import arrow from '@/images/arrow.svg'
 
 const pickRandom = (activePlayers: boolean[]) => {
   if (activePlayers.length === 0) return null
@@ -37,28 +38,28 @@ const JammerReplica = () => {
           chosen={selectedPlayer === 0}
           onclick={() => handlePlayerSelect(activePlayers, setActivePlayers, 0)}
         >
-          <Icon icon="mdi:arrow-up-bold" className='text-2xl -rotate-90' />
+          <Image src={arrow} alt="Player arrow" className='-rotate-90 w-7' />
         </PlayerButton>
         <PlayerButton
           active={activePlayers[1]}
           chosen={selectedPlayer === 1}
           onclick={() => handlePlayerSelect(activePlayers, setActivePlayers, 1)}
         >
-          <Icon icon="mdi:arrow-up-bold" className='text-2xl' />
+          <Image src={arrow} alt="Player arrow" className='w-7' />
         </PlayerButton>
         <PlayerButton
           active={activePlayers[2]}
           chosen={selectedPlayer === 2}
           onclick={() => handlePlayerSelect(activePlayers, setActivePlayers, 2)}
         >
-          <Icon icon="mdi:arrow-up-bold" className='text-2xl rotate-90' />
+          <Image src={arrow} alt="Player arrow" className='rotate-90 w-7' />
         </PlayerButton>
         <PlayerButton
           active={activePlayers[3]}
           chosen={selectedPlayer === 3}
           onclick={() => handlePlayerSelect(activePlayers, setActivePlayers, 3)}
         >
-          <Icon icon="mdi:arrow-up-bold" className='text-2xl rotate-180' />
+          <Image src={arrow} alt="Player arrow" className='rotate-180 w-7' />
         </PlayerButton>
       </div>
 
