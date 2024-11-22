@@ -120,12 +120,21 @@ npm run dev
 ```
 To install dependancies and run the project locally. Then go to ```localhost:3000```(It might change depending on if the port is open, see the console to ensure you open the correct url), and your should see the Buckshot Roulette Player Picker!
 
+See [Useful links](#useful-links) to find documentation for the tech stack used for this project, to help you get started!
+
 Now make your changes, commit and push them, and open a pull request (PR) to the [Original repo](https://git.graesberg.com/buckshot-roulette-randomizer/pulls)
 
 Make sure you:
 - Ensure the PR description clearly describes the problem and solution
 - Include the relevant issue number if applicable.
 - Give the PR catchy title (Somewhat optional, at least make it descriptive)
+- The PR should have a template, just fill this out as accurately as possible!
+
+## Useful links
+- [Next.js docs](https://nextjs.org/docs)
+- [tailwindcss docs](https://tailwindcss.com/)
+- [git docs](https://git-scm.com/docs/git)
+- [GitHub docs (Forking a repository)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 
 ## Styleguides
 To maintain convention and readability across the codebase, please conform to the following styleguides:
