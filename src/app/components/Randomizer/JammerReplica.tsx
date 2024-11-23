@@ -33,15 +33,15 @@ const JammerReplica = () => {
   const angles = ["-rotate-90", "", "rotate-90", "rotate-180"]
 
   return (
-    <main className='grid justify-items-center items-center aspect-[365/455] bg-[#200000] p-4'>
-      <div className='flex w-full h-full flex-col justify-start'>
-        <div className='w-full'>
+    <main className='grid justify-items-start items-center aspect-[365/455] bg-[#200000] p-4'>
+      <div className='flex h-full flex-col justify-start'>
+        <div>
           <h2 className='text-lg'>graesberg electronics</h2>
         </div>
         <Screen selectedPlayer={selectedPlayer} className='max-w-full' />
       </div>
 
-      <div className='flex flex-col gap-10 w-full'>
+      <div className='flex flex-col w-full gap-10'>
         <div className='flex justify-evenly w-full'>
           {activePlayers.map((active, index) => (
             <PlayerButton
@@ -54,7 +54,7 @@ const JammerReplica = () => {
             </PlayerButton>
           ))}
         </div>
-        <div className='flex justify-between w-full'>
+        <div className='flex justify-between'>
           <WideButton onClick={() => {
             const interval = setInterval(() => {setSelectedPlayer(pickRandom(activePlayers))}, Math.floor(Math.random() * 100))
             setRunning(true)

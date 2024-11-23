@@ -23,6 +23,8 @@ const ScreenPart: FC<ScreenPartProps> = ({ className, selected, rotate }) => (
 
 // Component overflows in the x axis
 //TODO: Figure out why and fix
+// * Fixed!
+//TODO: Now overflows in the y direction on smaller screens
 const JammerScreen: FC<JammerScreenProps> = ({ selectedPlayer, className }) => (
   <div className={`grid h-full w-full aspect-square grid-rows-3 grid-cols-3 ${className}`}> 
     <ScreenPart selected={selectedPlayer === 0} className="col-start-1 row-start-2 justify-self-end self-center" />
@@ -34,7 +36,7 @@ const JammerScreen: FC<JammerScreenProps> = ({ selectedPlayer, className }) => (
     src={arrow}
     alt="Arrow pointing to selected player"
     className={`
-      w-7
+      w-[30%]
       col-start-2
       row-start-2
       ${selectedPlayer != null ? angles[selectedPlayer as number] : 'hidden'}
