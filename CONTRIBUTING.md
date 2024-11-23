@@ -112,7 +112,7 @@ If you want to submit code to create the enchanement yourself, then:
 ### Your First Code Contribution
 To contribute, first fork the project and clone your repository. (To read more visit the [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo))
 
-> Node version 20.x.x or higher is a prerequisite to run the project
+> Node version 20.x.x or higher is a prerequisite to run the project\
 > Make sure you have installed it following the instructions on [their website](https://nodejs.org/en/download)
 
 After you have cloned the repository, run the commands
