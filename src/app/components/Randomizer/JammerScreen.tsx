@@ -11,10 +11,6 @@ const angles = ["-rotate-90", "", "rotate-90", "rotate-180"]
 
 const borderSelected = ["border-l-green-500", "border-t-green-500", "border-r-green-500", "border-b-green-500"]
 
-// Component overflows in the x axis
-//TODO: Figure out why and fix
-// * Fixed!
-//TODO: Now overflows in the y direction on smaller screens
 const JammerScreen: FC<JammerScreenProps> = ({ selectedPlayer, className }) => (
   <div className={`aspect-square${className}`}> 
     <div className={`
