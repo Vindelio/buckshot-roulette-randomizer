@@ -14,6 +14,10 @@ const JammerButton: FC<JammerButtonProps> = ({ active, className, onclick, disab
 
   <button
     className={`
+      border-b-4
+      border-b-slate-500
+      border-l-4
+      border-l-slate-600 
       bg-slate-300
       text-slate-950
       justify-self-end
