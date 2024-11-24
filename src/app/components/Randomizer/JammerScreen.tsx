@@ -7,43 +7,36 @@ interface JammerScreenProps {
   className?: string
 }
 
-interface ScreenPartProps {
-  className?: string
-  selected: boolean
-  rotate?: boolean
-}
-
 const angles = ["-rotate-90", "", "rotate-90", "rotate-180"]
 
-const ScreenPart: FC<ScreenPartProps> = ({ className, selected, rotate }) => (
-  <div
-    className={` ${rotate ? "aspect-[147/67] w-full" : "aspect-[67/147] h-full"} ${selected ? 'bg-green-500' : 'bg-green-950'} ${className}`}
-  ></div>
-)
+const borderSelected = ["border-l-green-500", "border-t-green-500", "border-r-green-500", "border-b-green-500"]
 
 // Component overflows in the x axis
 //TODO: Figure out why and fix
 // * Fixed!
 //TODO: Now overflows in the y direction on smaller screens
 const JammerScreen: FC<JammerScreenProps> = ({ selectedPlayer, className }) => (
-  <div className={`grid h-full w-full aspect-square grid-rows-3 grid-cols-3 ${className}`}> 
-    <ScreenPart selected={selectedPlayer === 0} className="col-start-1 row-start-2 justify-self-end self-center" />
-    <ScreenPart selected={selectedPlayer === 1} className="col-start-2 row-start-1 justify-self-center self-end" rotate />
-    <ScreenPart selected={selectedPlayer === 2} className="col-start-3 row-start-2 self-center" />
-    <ScreenPart selected={selectedPlayer === 3} className="col-start-2 row-start-3 justify-self-center" rotate />
-
-    <Image
-    src={arrow}
-    alt="Arrow pointing to selected player"
-    className={`
-      w-[30%]
-      col-start-2
-      row-start-2
-      ${selectedPlayer != null ? angles[selectedPlayer as number] : 'hidden'}
-      place-self-center
-      `}
-    style={{filter: "invert(0.5) sepia(1) saturate(5) hue-rotate(60deg)"}}
-    />
+  <div className={`aspect-square${className}`}> 
+    <div className={`
+    h-full
+    border-green-950
+    border-[2rem]
+    ${selectedPlayer != null ? borderSelected[selectedPlayer as number] : null
+    }
+    `}>
+      <Image
+      src={arrow}
+      alt="Arrow pointing to selected player"
+      className={`
+        w-full
+        ${selectedPlayer != null ? `
+        ${angles[selectedPlayer as number]}
+        ` : 
+        'opacity-0'}
+        `}
+        style={{filter: "invert(0.5) sepia(1) saturate(5) hue-rotate(105deg)"}}
+      />
+    </div>
   </div>
 )
 
